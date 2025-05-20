@@ -1,0 +1,42 @@
+/* --------- COLORS CHAPTER ---------*/
+
+/* ------------- Foreground Color ---------  */
+
+/* color name */
+h1 {
+  color: DarkCyan;
+}
+/* hex code */
+h2 {
+  color: #ee3e80;
+}
+/* rgb value */
+p {
+  color: rgb(100, 100, 90);
+}
+
+/* ----------- Background Color ---------- */
+
+/* body {
+  background-color: rgb(200, 200, 200);
+}
+h1 {
+  background-color: DarkCyan;
+}
+h2 {
+  background-color: #ee3e80;
+}
+p {
+  background-color: white;
+} */
+
+/* -------- OPACITY --------- */
+
+/* p.one {
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+p.two {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+} */
