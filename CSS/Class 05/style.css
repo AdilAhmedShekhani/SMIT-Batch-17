@@ -1,0 +1,36 @@
+/* BULLET POINT STYLES */
+ol {
+  list-style-type: lower-roman;
+}
+
+/* Images For Bullet  */
+ul {
+  list-style-image: url("images/star.png");
+}
+li {
+  margin: 10px 0px 0px 0px;
+}
+
+/* POSITION THE MARKER */
+
+ul {
+  width: 150px;
+}
+li {
+  margin: 10px;
+}
+ul.illuminations {
+  list-style-position: outside;
+}
+ul.season {
+  list-style-position: inside;
+}
+
+/* LIST SHORTHAND */
+ul {
+  list-style: inside circle;
+  width: 300px;
+}
+li {
+  margin: 10px 0px 0px 0px;
+}
