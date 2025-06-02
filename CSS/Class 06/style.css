@@ -1,0 +1,55 @@
+/* TABLE PROPERTIES */
+body {
+  font-family: Arial, Verdana, sans-serif;
+  color: #111111;
+}
+table {
+  width: 600px;
+}
+th,
+td {
+  padding: 7px 10px 10px 10px;
+}
+th {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 90%;
+  border-bottom: 2px solid #111111;
+  border-top: 1px solid #999;
+  text-align: left;
+}
+tr.even {
+  background-color: #efefef;
+}
+tr:hover {
+  background-color: #c3e6e5;
+}
+.money {
+  text-align: right;
+}
+
+/* BORDER ON EMPTY CELL */
+
+td {
+  border: 1px solid #0088dd;
+  padding: 15px;
+}
+table.one {
+  empty-cells: show;
+}
+table.two {
+  empty-cells: hide;
+}
+
+/* GAP BETWEEN CELLS */
+td {
+  background-color: #0088dd;
+  padding: 15px;
+  border: 2px solid #000000;
+}
+table.one {
+  border-spacing: 5px 15px;
+}
+table.two {
+  border-collapse: collapse;
+}
