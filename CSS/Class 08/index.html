@@ -1,12 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Normal Flow -->
+    <!-- Position : Static -->
+    <h1>The Evolution of the Bicycle</h1>
+    <p>
+      In 1817 Baron von Drais invented a walking machine that would help him get
+      around the royal gardens faster...
+    </p>
+    <!-- Position Relative -->
+    <h1>The Evolution of the Bicycle</h1>
+    <p>
+      In 1817 Baron von Drais invented a walking machine that would help him get
+      around the royal gardens faster...
+    </p>
+    <!-- Position Absolute -->
+    <h1>The Evolution of the Bicycle</h1>
+    <p>
+      In 1817 Baron von Drais invented a walking machine that would help him get
+      around the royal gardens faster...
+    </p>
+    <!-- Position Fixed -->
+    <h1>The Evolution of the Bicycle</h1>
+    <p class="example">
+      In 1817 Baron von Drais invented a walking machine that would help him get
+      around the royal gardens faster...
+    </p>
+    <!-- Flaoting Element -->
+    <h1>The Evolution of the Bicycle</h1>
+    <blockquote>
+      "Life is like riding a bicycle. To keep your balance you must keep
+      moving." - Albert Einstein
+    </blockquote>
+    <p>
+      In 1817 Baron von Drais invented a walking machine that would help him get
+      around the royal gardens faster: two same-size in-line wheels, the front
+      one steerable, mounted in a frame ...
+    </p>
+    <!-- Using Float to Place Elements Side-By-Side -->
+    <h1>The Evolution of the Bicycle</h1>
+    <p>
+      In 1817 Baron von Drais invented a walking machine that would help him get
+      around...
+    </p>
+    <!-- Clearing Float -->
+    <p class="clear">
+      In 1865, the velocipede (meaning "fast foot") attached pedals to the front
+      wheel, but its wooden structure made it extremely uncomfortable.
+    </p>
+    <!-- Parent of Floated Elements : PROBLEM -->
+    <h1>The Evolution of the Bicycle</h1>
+    <div>
+      <p>
+        In 1817 Baron von Drais invented a walking machine that would help him
+        get around the royal gardens faster...
+      </p>
+    </div>
+    <!-- Parents of Floated Elements: Solution -->
+    <h1>The Evolution of the Bicycle</h1>
+    <div>
+      <p>
+        In 1817 Baron von Drais invented a walking machine that would help him
+        get around the royal gardens faster...
+      </p>
+    </div>
+    <!-- Creating Multi-Column Layout With Floats -->
+    <!-- Case 1 -->
+
+    <h1>The Evolution of the Bicycle</h1>
+    <div class="column1of2">
+      <h3>The First Bicycle</h3>
+      <p>
+        In 1817 Baron von Drais invented a walking machine that would help him
+        get around the royal gardens faster: two same-size ...
+      </p>
+    </div>
+    <div class="column2of2">
+      <h3>Bicycle Timeline</h3>
+      ...
+    </div>
+    <!-- Case 2 -->
+    <h1>The Evolution of the Bicycle</h1>
+    <div class="column1of3">
+      <h3>The First Bicycle</h3>
+      ...
+    </div>
+    <div class="column2of3">
+      <h3>Further Innovations</h3>
+      ...
+    </div>
+    <div class="column3of3">
+      <h3>Bicycle Timeline</h3>
+      ...
+    </div>
+
+    <!-- Fixed Width Layout -->
+    <div id="header">
+      <h1>Logo</h1>
+      <div id="nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <div id="feature">
+        <p>Feature</p>
+      </div>
+      <div class="article column1">
+        <p>Column One</p>
+      </div>
+      <div class="article column2">
+        <p>Column Two</p>
+      </div>
+      <div class="article column3">
+        <p>Column Three</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>&copy; Copyright 2011</p>
+    </div>
+    <!-- Liquid Layout -->
+    <div id="header">
+      <h1>Logo</h1>
+      <div id="nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <div id="feature">
+        <p>Feature</p>
+      </div>
+      <div class="article column1">
+        <p>Column One</p>
+      </div>
+      <div class="article column2">
+        <p>Column Two</p>
+      </div>
+      <div class="article column3">
+        <p>Column Three</p>
+      </div>
+    </div>
+    <div id="footer">
+      <p>&copy; Copyright 2011</p>
+    </div>
+    <!-- Grid Based Layout -->
+    <div class="container_12 clearfix">
+      <div id="header" class="grid_12">
+        <h1>Logo</h1>
+        <div id="nav">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="feature" class="grid_12">
+        <p>Feature</p>
+      </div>
+      <div class="article grid_4">
+        <p>Column One</p>
+      </div>
+      <div class="article grid_4">
+        <p>Column Two</p>
+      </div>
+      <div class="article grid_4">
+        <p>Column Three</p>
+      </div>
+      <div id="footer" class="grid_12">
+        <p>&copy; Copyright 2011</p>
+      </div>
+    </div>
+    <!-- .container_12 -->
+
+    <!-- Multiple Style Sheets -->
+    <!-- HTML page content here -->
+
+    <!-- Complete Layout Page -->
+
+    <div class="header">
+      <div class="container_12">
+        <div class="grid_5">
+          <img
+            src="images/logo.png"
+            alt="Pedal Faster - The modern bicycle magazine"
+            width="216"
+            height="37"
+            class="logo"
+          />
+          <img
+            src="images/header-triangle.png"
+            alt=""
+            width="116"
+            height="100"
+          />
+        </div>
+        <div class="nav grid_7">
+          <a href="">home</a> / <a href="">news</a> / <a href="">archives</a> /
+          <a href="">about</a> / <a href="">contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="main-story container_12">
+        <div class="grid_6 push_6">
+          <h1><a href="">Fixed Gear Forever</a></h1>
+        </div>
+        <div class="intro grid_3 push_9">
+          <p class="date">16 APRIL 2011</p>
+          <p>
+            The veloheld combines minimalist design with superb quality. Devoid
+            of excessive graphics and gear shift components, the veloheld
+            product range delights us with its beauty and simplicity ...
+          </p>
+        </div>
+      </div>
+      <!-- .main-story -->
+      <div class="more-articles container_12">
+        <h2 class="grid_12"><a href="">More Articles</a></h2>
+        <div class="grid_3">
+          <img
+            src="images/more1.jpg"
+            alt="The road ahead"
+            width="220"
+            height="125"
+          />
+          <p>
+            <a href=""
+              >On the Road: from the fixed gear fanatic's point of view</a
+            >
+          </p>
+          <p>
+            <a href="">Brand History: Pashley Cycles - hand-built in England</a>
+          </p>
+          <p>
+            <a href=""
+              >Frame Wars: Innovations in cycle manufacture and repair</a
+            >
+          </p>
+        </div>
+        <div class="grid_3">
+          <img
+            src="images/more2.jpg"
+            alt="Sketchbook"
+            width="220"
+            height="125"
+          />
+          <p><a href="">Touring Diary: A sketchbook in your basket</a></p>
+          <p>
+            <a href="">Top Ten Newcomers for 2012: A peek at what's to come</a>
+          </p>
+          <p><a href="">InnerTube: The best cycling videos on the web</a></p>
+        </div>
+        <div class="grid_3">
+          <img
+            src="images/more3.jpg"
+            alt="Repair shop sign"
+            width="220"
+            height="125"
+          />
+          <p>
+            <a href="">Product Review: All baskets were not created equal</a>
+          </p>
+          <p>
+            <a href=""
+              >Going Public: Out &amp; About with the founder of Public</a
+            >
+          </p>
+          <p><a href="">Cycle Lane Defence: Know your rights</a></p>
+        </div>
+        <div class="grid_3">
+          <img
+            src="images/more4.jpg"
+            alt="Schwinn Spitfire"
+            width="220"
+            height="125"
+          />
+          <p><a href="">Bicyle Hall of Fame: The 1958 Schwinn Spitfire</a></p>
+          <p><a href="">Reader Survey: Share your thoughts with us!</a></p>
+          <p>
+            <a href="">Chain Gang: The evolution of the humble bike chain</a>
+          </p>
+        </div>
+      </div>
+      <!-- .more-articles -->
+    </div>
+    <!-- .wrapper -->
+    <div class="footer clearfix">
+      <div class="container_12">
+        <p class="grid_12">
+          <a href="">Legal Information</a> | <a href="">Privacy Policy</a> |
+          <a href="">Copyright &copy; Pedal Faster 2011</a>
+        </p>
+      </div>
+    </div>
+  </body>
 </html>

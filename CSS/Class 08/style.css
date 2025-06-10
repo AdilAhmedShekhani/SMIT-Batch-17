@@ -1,0 +1,363 @@
+/* Normal Flow */
+/* Position : Static */
+body {
+  width: 750px;
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+}
+h1 {
+  background-color: #efefef;
+  padding: 10px;
+}
+p {
+  width: 450px;
+}
+
+/* Position Relative */
+
+p.example {
+  position: relative;
+  top: 10px;
+  left: 100px;
+}
+
+/* Position Absolute */
+
+h1 {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  width: 250px;
+}
+p {
+  width: 450px;
+}
+
+/* Position Fixed */
+
+h1 {
+  position: fixed;
+  top: 0px;
+  left: 50px;
+  padding: 10px;
+  margin: 0px;
+  width: 100%;
+  background-color: #efefef;
+}
+p.example {
+  margin-top: 100px;
+}
+
+/* Over Lapping Elements */
+/* Z-Index */
+h1 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  padding: 10px;
+  width: 100%;
+  background-color: #efefef;
+  z-index: 10;
+}
+p {
+  position: relative;
+  top: 70px;
+  left: 70px;
+}
+
+/* Flaoting Elements */
+/* Float */
+blockquote {
+  float: right;
+  width: 275px;
+  font-size: 130%;
+  font-style: italic;
+  font-family: Georgia, Times, serif;
+  margin: 0px 0px 10px 10px;
+  padding: 10px;
+  border-top: 1px solid #665544;
+  border-bottom: 1px solid #665544;
+}
+
+/* Using Float to Place Elements Side by Side */
+body {
+  width: 750px;
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+}
+p {
+  width: 230px;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  background-color: #efefef;
+}
+
+/* Clearing Floats */
+/* Clear */
+body {
+  width: 750px;
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+}
+p {
+  width: 230px;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+  background-color: #efefef;
+}
+.clear {
+  clear: left;
+}
+/* Parent of Floated Elements : Problem */
+div {
+  border: 1px solid #665544;
+}
+/* Parents of Floated
+Elements: Solution */
+
+div {
+  border: 1px solid #665544;
+  overflow: auto;
+  width: 100%;
+}
+
+/* Creating Multi-Column Layout With Floats */
+/* Case 1 */
+.column1of2 {
+  float: left;
+  width: 620px;
+  margin: 10px;
+}
+.column2of2 {
+  float: left;
+  width: 300px;
+  margin: 10px;
+}
+/* Case 2 */
+.column1of3,
+.column2of3,
+.column3of3 {
+  width: 300px;
+  float: left;
+  margin: 10px;
+}
+
+/* Fixed Width Layout */
+
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+#content {
+  overflow: auto;
+  height: 100%;
+}
+#nav,
+#feature,
+#footer {
+  background-color: #efefef;
+  padding: 10px;
+  margin: 10px;
+}
+.column1,
+.column2,
+.column3 {
+  background-color: #efefef;
+  width: 300px;
+  float: left;
+  margin: 10px;
+}
+li {
+  display: inline;
+  padding: 5px;
+}
+
+/* Liquid Layout */
+
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+#content {
+  overflow: auto;
+}
+#nav,
+#feature,
+#footer {
+  margin: 1%;
+}
+.column1,
+.column2,
+.column3 {
+  width: 31.3%;
+  float: left;
+  margin: 1%;
+}
+.column3 {
+  margin-right: 0%;
+}
+li {
+  display: inline;
+  padding: 0.5em;
+}
+#nav,
+#footer {
+  background-color: #efefef;
+  padding: 0.5em 0;
+}
+#feature,
+.article {
+  height: 10em;
+  margin-bottom: 1em;
+  background-color: #efefef;
+}
+
+/* Grid Based Layout */
+* {
+  font-family: Arial, Verdana, sans-serif;
+  color: #665544;
+  text-align: center;
+}
+#nav,
+#feature,
+.article,
+#footer {
+  background-color: #efefef;
+  margin-top: 20px;
+  padding: 10px 0px 5px 0px;
+}
+#feature,
+.article {
+  height: 100px;
+}
+li {
+  display: inline;
+  padding: 5px;
+}
+/* Multiple Style Sheets */
+@import url("tables.css");
+@import url("typography.css");
+body {
+  color: #666666;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+#page {
+  width: 600px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #d6d6d6;
+  padding: 20px;
+}
+h3 {
+  color: #547ca0;
+}
+
+/* Layout Complete Page */
+@font-face {
+  font-family: "QuicksandBook";
+  src: url("fonts/Quicksand_Book-webfont.eot");
+  src: url("fonts/Quicksand_Book-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("fonts/Quicksand_Book-webfont.woff") format("woff"),
+    url("fonts/Quicksand_Book-webfont.ttf") format("truetype"),
+    url("fonts/Quicksand_Book-webfont.svg#QuicksandBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  color: #ffffff;
+  background: #413f3b url("images/bg.jpg");
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 90%;
+  margin: 0px;
+  text-align: center;
+}
+a {
+  color: #b5c1ad;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+}
+.header {
+  background-image: url("images/bg-header.jpg");
+  padding: 0px 0px 0px 0px;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 50;
+}
+.nav {
+  float: right;
+  font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+  padding: 45px 0px 0px 0px;
+  text-align: right;
+}
+.wrapper {
+  width: 960px;
+  margin: 0px auto;
+  background-image: url("images/bg-triangle.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  text-align: left;
+}
+.logo {
+  margin-bottom: 20px;
+}
+h1,
+h2 {
+  font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 240%;
+  margin-top: 140px;
+}
+.date {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 75%;
+  color: #b5c1ad;
+}
+.intro {
+  clear: left;
+  font-size: 90%;
+  line-height: 1.4em;
+}
+.main-story {
+  background-image: url("images/triangles.png");
+  background-repeat: no-repeat;
+  background-position: 122px 142px;
+  height: 570px;
+}
+.more-articles {
+  border-top: 1px solid #ffffff;
+  padding: 10px;
+}
+.more-articles p {
+  border-bottom: 1px solid #807c72;
+  padding: 5px 0px 15px 0px;
+  font-size: 80%;
+}
+.more-articles p:last-child {
+  border-bottom: none;
+}
+.footer {
+  clear: both;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px 10px;
+}
+.footer p {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 75%;
+  text-align: right;
+}
+.footer a {
+  color: #807c72;
+}
