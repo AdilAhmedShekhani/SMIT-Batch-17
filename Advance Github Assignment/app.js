@@ -8,6 +8,8 @@ const SUCCESS_CONTAINER_CLASS = 'result-success-container';
 const SUCCESS_TEXT_CLASS = 'result-success-text';
 const ERROR_CONTAINER_CLASS = 'result-error-container';
 const ERROR_TEXT_CLASS = 'result-error-text';
+
+
 const ALL_CONTAINER_CLASSES = [INITIAL_CONTAINER_CLASS, SUCCESS_CONTAINER_CLASS, ERROR_CONTAINER_CLASS];
 const ALL_TEXT_CLASSES = [INITIAL_TEXT_CLASS, SUCCESS_TEXT_CLASS, ERROR_TEXT_CLASS];
 // ======================================================================================================
