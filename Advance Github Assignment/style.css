@@ -1,0 +1,109 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    margin: 0;
+}
+/* ===================================== */
+/* ===================================== */
+/* ===================================== */
+
+
+.card {
+    width: 100%;
+    max-width: 512px;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.header-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.header-subtitle {
+    color: #475569;
+    text-align: center;
+    margin: 0;
+}
+
+
+.input-field-cont{
+    /* background-color: lightblue; */
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.text-input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+    background-color: #ffffff;
+    color: #1f2937;
+    transition: all 0.2s ease;
+}
+.text-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79,70,229,0.2);
+}
+.result-container {
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.result-text {
+    text-align: center;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+.result-initial-container {
+    border-color: #94a3b8;
+    background-color: transparent;
+}
+.result-initial-text {
+    font-weight: 600;
+    color: #64748b;
+}
+.result-success-container {
+    border-color: #34d399;
+    background-color: #d1fae5;
+}
+.result-success-text {
+    font-weight: 800;
+    color: #065f46;
+}
+.result-error-container {
+    border-color: #fb7185;
+    background-color: #fee2e2;
+}
+.result-error-text {
+    font-weight: 700;
+    color: #991b1b;
+}
