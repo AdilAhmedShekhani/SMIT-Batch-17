@@ -1,13 +1,12 @@
-import "./App.css";
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todo";
 
 function App() {
   return (
     <>
-      <div>
-        <h1 class="text-3xl font-bold underline">
-          Learning React Redux Toolkit
-        </h1>
-      </div>
+      <h1>Learning React redux toolkit</h1>
+      <AddTodo />
+      <Todos />
     </>
   );
 }
