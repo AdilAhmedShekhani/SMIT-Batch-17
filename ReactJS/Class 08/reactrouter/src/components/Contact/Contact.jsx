@@ -80,7 +80,7 @@ export default function Contact() {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                  info@acme.org
+                  https://www.linkedin.com/in/adilahmedshekhani/
                 </div>
               </div>
             </div>
