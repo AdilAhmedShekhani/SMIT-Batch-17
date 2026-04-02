@@ -80,7 +80,7 @@ export default function Contact() {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                  https://www.linkedin.com/in/adilahmedshekhani/
+                  info@adilshekhani.com
                 </div>
               </div>
             </div>
