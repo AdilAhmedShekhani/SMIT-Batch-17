@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📘 Next.js Routing – Beginner Guide
 
-## Getting Started
+## 🚀 Introduction
 
-First, run the development server:
+In today’s class, we started learning **Next.js** and focused on one of its most powerful features: **Routing**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Routing means **how users move from one page to another** in a website.
+
+In Next.js, routing is **automatic** — you don’t need to install extra libraries like React Router.
+
+---
+
+## 📂 File-Based Routing (Main Concept)
+
+Next.js uses **file-based routing**.
+
+👉 This means:
+
+- Every file inside the `pages` (or `app`) folder becomes a **route (URL)**.
+
+### Example:
+
+```
+pages/
+ ├── index.js
+ ├── about.js
+ ├── blog.js
+ └── contact.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then your routes will be:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `/` → Home page (`index.js`)
+- `/about` → About page
+- `/blog` → Blog page
+- `/contact` → Contact page
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🏠 Home Page (index.js)
 
-To learn more about Next.js, take a look at the following resources:
+The `index.js` file is the **main (home) page**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```js
+export default function Home() {
+  return <h1>Welcome to Home Page</h1>;
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔗 Navigation Between Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To move between pages, we use **Link component**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```js
+import Link from "next/link";
+
+export default function Home() {
+  return (
+    <>
+      <h1>Home Page</h1>
+
+      <Link href="/about">About</Link>
+      <br />
+      <Link href="/blog">Blog</Link>
+      <br />
+      <Link href="/contact">Contact</Link>
+    </>
+  );
+}
+```
+
+👉 This helps users navigate without refreshing the page.
+
+---
+
+## 📁 Nested Routing (Page inside Page)
+
+You also learned how to create a **page inside another folder**.
+
+### Example:
+
+```
+pages/
+ ├── blog/
+ │    ├── index.js
+ │    └── post.js
+```
+
+### Routes will be:
+
+- `/blog` → Blog main page
+- `/blog/post` → Blog post page
+
+---
+
+## 🧠 Key Points to Remember
+
+✔ No need for React Router  
+✔ File name = Route name  
+✔ `index.js` = default page of folder  
+✔ Folders create nested routes  
+✔ Use `Link` for navigation
+
+---
+
+## 📌 Simple Real-Life Example
+
+Think of it like this:
+
+- Website = School 🏫
+- Pages = Classrooms
+- Routes = Classroom doors 🚪
+
+Each file creates a new “door” (URL) to enter that page.
+
+---
+
+## 🎯 What You Practiced Today
+
+✅ Created Home Page  
+✅ Created About, Blog, Contact Pages  
+✅ Navigated between pages  
+✅ Created nested (inner) pages
+
+---
+
+## 🔥 Next Step
+
+In upcoming classes, we will learn:
+
+- Dynamic Routing
+- Layouts
+- Components reuse
+- API routes
+
+---
+
+## 💡 Final Tip
+
+Keep practicing by:
+
+- Creating more pages
+- Adding links between them
+- Making small mini websites
