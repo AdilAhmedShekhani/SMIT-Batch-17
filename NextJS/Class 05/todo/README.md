@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#  Next.js API & Data Rendering
 
-## Getting Started
+A simple full-stack exercise built with **Next.js** to demonstrate how
+to create an API route and render its data on the frontend.
 
-First, run the development server:
+##  Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project showcases a basic implementation of:
+
+-   Building a **GET API endpoint** using Next.js App Router
+-   Structuring and returning JSON data
+-   Fetching API data on the client side
+-   Dynamically rendering data using React
+
+The goal was to understand how backend and frontend logic work together
+within a single Next.js application.
+
+------------------------------------------------------------------------
+
+##  Features
+
+-   Custom API route (`/api/tasks`)
+-   Static dataset returned from the API
+-   Client-side data fetching using `fetch`
+-   Dynamic UI rendering with `.map()`
+-   Clean and minimal project structure
+
+------------------------------------------------------------------------
+
+##   Implementation Details
+
+### API Route
+
+``` js
+export async function GET() {
+  const tasks = ["Task 1", "Task 2", "Task 3"];
+  return Response.json(tasks);
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+------------------------------------------------------------------------
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Data Fetching
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+``` js
+const res = await fetch("/api/tasks");
+const data = await res.json();
+```
 
-## Learn More
+------------------------------------------------------------------------
 
-To learn more about Next.js, take a look at the following resources:
+### Rendering
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+``` js
+<ul>
+  {data.map((task, index) => (
+    <li key={index}>{task}</li>
+  ))}
+</ul>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+------------------------------------------------------------------------
 
-## Deploy on Vercel
+##  Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    app/
+    â”œâ”€â”€ api/
+    â”‚   â””â”€â”€ tasks/
+    â”‚       â””â”€â”€ route.js
+    â”œâ”€â”€ page.js
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+------------------------------------------------------------------------
+
+##  Getting Started
+
+``` bash
+npm install
+npm run dev
+```
+
+------------------------------------------------------------------------
+
+##  Learning Outcome
+
+-   Creating API routes in Next.js
+-   Handling frontend + backend together
+-   Rendering dynamic data
+
+------------------------------------------------------------------------
+
+## Future Improvements
+
+-   Add loading and error states
+-   Connect database
+-   Add CRUD functionality
+
+------------------------------------------------------------------------
+
+##  License
+
+This project is open-source and for learning purposes.
