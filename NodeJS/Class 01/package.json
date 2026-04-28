@@ -7,7 +7,7 @@
   "type": "module",
   "main": "Index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "express": "^5.2.1"
