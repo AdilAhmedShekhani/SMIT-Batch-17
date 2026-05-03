@@ -1,7 +1,26 @@
+const tasks = [
+  {
+    id: 1,
+    task: "Task 1",
+  },
+  {
+    id: 2,
+    task: "Task 2",
+  },
+  {
+    id: 3,
+    task: "Task 3",
+  },
+];
+
 import express from "express";
 
 const app = express();
 const PORT = 4000;
+
+// app.get("/", (req, res) => {
+//   res.status(200).send(tasks);
+// });
 
 app.get("/", (req, res) => {
   console.log(req);
