@@ -22,6 +22,8 @@ router.get("/", (req, res) => {
 //post user
 router.post("/", (req, res) => {
   const { name, email } = req.body;
+  console.log("name", name);
+  console.log("email", email);
   users.push({
     id: users.length + 1,
     name,
