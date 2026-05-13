@@ -1,5 +1,6 @@
 import express from "express";
 import userRoutes from "./routes/users.js";
+import taskRoutes from "./routes/tasks.js";
 
 const app = express();
 const PORT = 4000;
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Routes
 app.use("/users", userRoutes);
+app.use("/tasks", taskRoutes);
 
 // MogoDB connection and server start
 mongoose.connect(process.env.MONGO_URI)
