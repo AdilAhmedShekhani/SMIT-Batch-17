@@ -2,7 +2,14 @@ import express from "express";
 import userRoutes from "./routes/users.js";
 
 const app = express();
+const PORT = 4000;
+import mongoose from "mongoose";
+import morgan from "morgan";
+import dotenv from "dotenv";
 
+dotenv.config();
+
+app.use(morgan("dev"));
 app.use(express.json());
 
 // Routes
@@ -13,6 +20,10 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("Connected to MongoDB"))
 .catch((err) => console.error("MongoDB connection error:", err));
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.get("/", (req, res) => {
+  res.send("Server is running successfully!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
