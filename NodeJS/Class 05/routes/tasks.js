@@ -41,10 +41,19 @@ router.put("/:id", async (req, res) => {
         updatedTask.completed = completed;
 
         await updatedTask.save();
+
     }
     sendResponse(res, 200, updatedTask, false, "Task updated successfully");
 });
 
 
+router.delete("/:id", async (req, res) => {
+    const deletedTask = await Task.findById(req.params.id);
+    if (!deletedTask) {
+        return sendResponse(res, 404, null, true, "Task not found");
+    }
+    await Task.deleteOne({ _id: req.params.id });
+    sendResponse(res, 200, deletedTask, false, "Task deleted successfully");
+});
 
 export default router;
