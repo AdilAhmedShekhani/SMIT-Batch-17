@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  web:
+    image: node:18
+    working_dir: /src
+    volumes:
+      - .:/src
+    command: sh -c "npm install && npm start"
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
